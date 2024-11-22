@@ -1,0 +1,33 @@
+{% if amiconnected is defined and amiconnected is not null and amiconnected != "" %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsr" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ amiconnected|upper }}
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUsr">
+            {% if (scale_right is defined) and (scale_right is not null) and (scale_right > 4) %}
+                <a class="dropdown-item" href="/managerstu"><span class="icon-group-full nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Manager étudiant</span></a>
+                <hr>
+                <a class="dropdown-item" href="/dashboardass"><span class="icon-clock-o nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Dashboard retard</span></a>
+                <a class="dropdown-item" href="/manageredt"><span class="icon-calendar nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Manager EDT</span></a>
+            {% endif %}
+            {% if (scale_right is defined) and (scale_right is not null) and ((scale_right == 11) or (scale_right > 99)) %}
+                <a class="dropdown-item" href="/loadedt"><span class="icon-file-text nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Charger EDT</span></a>
+                <a class="dropdown-item" href="/jqcreateedt"><span class="icon-pencil-square-o nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Créer EDT</span></a>
+            {% endif %}
+            <hr>
+            {% if (scale_right is defined) and (scale_right is not null) and (scale_right > 4) %}
+                <a class="dropdown-item" href="/managertea"><span class="icon-person nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Manager enseignant</span></a>
+                <hr>
+                <a class="dropdown-item" href="/managerdiploma"><span class="icon-graduation-cap nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Manager diplôme</span></a>
+                <hr>
+            {% endif %}
+            {% if (scale_right is defined) and (scale_right is not null) and ((scale_right < 20) or (scale_right > 99)) %}
+                <a class="dropdown-item" href="/scan/in"><span class="icon-sign-in nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Scan entrée</span></a>
+                <a class="dropdown-item" href="/scan/out"><span class="icon-sign-out nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Scan sortie</span></a>
+            {% endif %}
+            <a class="dropdown-item" href="/checklastscan"><span class="icon-eye nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Scan assiduité</span></a>
+            <hr>
+            <a class="dropdown-item" href="/uaclogout"><span class="icon-sign-out-1 nav-icon-fa nav-text"></span>&nbsp;<span class="ace-nav-adj">Déconnecter</span> </a>
+          </div>
+        </li>
+{% endif %}

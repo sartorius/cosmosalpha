@@ -1,0 +1,9 @@
+{% if amiconnected is defined and amiconnected is not null and amiconnected != "" %}
+        {% if (scale_right is defined) and (scale_right is not null) and (scale_right == 0) %}
+            {% include 'RawTemplate/_navbarscanner.html.twig' %}
+        {% else %}
+            {% include 'RawTemplate/_navbaroriginal.html.twig' %}
+        {% endif %}
+{% else %}
+    {% include 'RawTemplate/_navbaroriginal.html.twig' %}
+{% endif %}

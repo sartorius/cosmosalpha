@@ -1,0 +1,31 @@
+{% include 'RawTemplate/_header.html.twig' %}
+
+<div class="row">
+    <div class="col-lg-4 mgs-mainblk-txt">
+    </div>
+    <div class="col-lg-4 mgs-mainblk-txt">
+            <div class="mg-verify-logo-login">
+                {# {{ asset('build/images/waiting-2.gif') }} #}
+                <img src="{{ asset('build/img/LogoRefSQRounded400X400.png') }}" style="width:150px; height:150px; opacity: 0.5;"
+                        title="Maviescolaire" alt="Maviescolaire Logo">
+            </div>
+
+            {{ form_errors(registrationForm) }}
+
+            {{ form_start(registrationForm) }}
+                {{ form_row(registrationForm.username) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+                {{ form_row(registrationForm.agreeTerms) }}
+
+                <button type="submit" class="uac-line-login-btn btn btn-outline-dark">S'enregistrer</button>
+            {{ form_end(registrationForm) }}
+
+    </div>
+    <div class="col-lg-4 mgs-mainblk-txt">
+    </div>
+</div>
+
+
+{% include 'RawTemplate/_footer.html.twig' %}

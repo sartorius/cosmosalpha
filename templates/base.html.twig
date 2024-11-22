@@ -1,0 +1,15 @@
+{% include 'RawTemplate/_header.html.twig' %}
+    
+        <div id="root"></div>
+        <div id="test">Si vous voyez ceci, le fichier est pris en compte.</div>
+        <div id="test2">Si vous voyez ceci, le fichier est pris en compte.</div>
+
+        <div>Show env : {{ app_environment }}/{{ app_namex }}</div>
+
+        <header>{% block header %}{% endblock %}</header>
+        <main>{% block body %}{% endblock %}
+        </main>
+
+
+
+{% include 'RawTemplate/_footer.html.twig' %}

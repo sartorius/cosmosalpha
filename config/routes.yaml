@@ -1,0 +1,18 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+main:
+    path:       /
+    controller: App\Controller\HomeController::index
+app_register:
+    path:       /register32983792873987982739827398273982
+    controller: App\Controller\SecurityController::register
+app_login:
+    path:       /amxlogin
+    controller: App\Controller\SecurityController::login
+module:
+    path:       /module
+    controller: App\Controller\StaticController::module
