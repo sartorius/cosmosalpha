@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+# part1 is the first version of the app plus assiduite
+rm -f ./config/db/_all.part1.sql
+
+cat ./config/db/system/basic_function.sql >> ./config/db/_all.part1.sql
+cat ./config/db/system/basic_support.sql >> ./config/db/_all.part1.sql
+cat ./config/db/system/param_table.sql >> ./config/db/_all.part1.sql
