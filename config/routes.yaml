@@ -16,3 +16,18 @@ app_login:
 module:
     path:       /module
     controller: App\Controller\StaticController::module
+startover:
+    path:       /startover
+    controller: App\Controller\StaticController::startover
+partner:
+    path:       /partner
+    controller: App\Controller\StaticController::partner
+secondaire:
+    path:       /secondaire
+    controller: App\Controller\StaticController::secondaire
+superieur:
+    path:       /superieur
+    controller: App\Controller\StaticController::superieur
+calendar:
+    path:       /calendar
+    controller: App\Controller\StaticController::calendar

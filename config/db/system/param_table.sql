@@ -303,13 +303,16 @@ DROP TABLE IF EXISTS uac_calendar;
 CREATE TABLE IF NOT EXISTS uac_calendar (
   `id` SMALLINT UNSIGNED NOT NULL,
   `calendar` CHAR(7) NOT NULL,
-  `semester` CHAR(1) NOT NULL,
   `display_date` VARCHAR(60) NOT NULL,
   `display_info` VARCHAR(250) NOT NULL,
   `observation` VARCHAR(250) NULL,
+  `type_of_day` CHAR(1) NOT NULL DEFAULT 'N',
   `is_displayed` CHAR(1) NOT NULL DEFAULT 'Y',
+  `tech_start_date` DATE NOT NULL,
+  `tech_end_date` DATE NOT NULL,
   `create_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`));
+
 
 
 /*************

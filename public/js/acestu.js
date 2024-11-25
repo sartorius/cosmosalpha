@@ -1001,18 +1001,11 @@ function modifyProfile(){
 function loadCalendar(){
   let calendarStr = "";
   let invCalendar = "";
-  let invSemester = "";
   for(let i=0; i<dataCalendarToJsonArray.length; i++){
     if(!(invCalendar == dataCalendarToJsonArray[i].calendar)){
       invCalendar = dataCalendarToJsonArray[i].calendar;
       calendarStr = calendarStr + '<br><h1>Calendrier ' + invCalendar + '</h1>';
     }
-
-    if(!(invSemester == dataCalendarToJsonArray[i].semester)){
-      invSemester = dataCalendarToJsonArray[i].semester;
-      calendarStr = calendarStr + '<br><h2><span class="icon-calendar nav-text"></span>&nbsp;Semestre ' + invSemester + '</h2><hr>';
-    }
-
     calendarStr = calendarStr + '<span class="cal-lin">' + dataCalendarToJsonArray[i].DISP_DATE + '</span>' + '<span class="cal-lin">' + dataCalendarToJsonArray[i].DISP_INFO + '</span>' + '<span class="cal-lin">' + (dataCalendarToJsonArray[i].OBSERVATION == '' ? '&nbsp;' : dataCalendarToJsonArray[i].OBSERVATION) + '</span><br>';
 
     
@@ -1023,7 +1016,7 @@ function loadCalendar(){
 
 /***********************************************************************************************************/
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
   console.log('We are in ACE-STU');
 
   if($('#mg-graph-identifier').text() == 'das-stu'){

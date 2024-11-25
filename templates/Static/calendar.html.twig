@@ -1,0 +1,32 @@
+{% include 'RawTemplate/_header.html.twig' %}
+
+<script>
+
+    let dataCalendarToJsonArray = JSON.parse('{{ result_query_get_calendar | json_encode | raw }}');
+</script>
+
+<div id="mg-graph-identifier">uac-cal</div>
+<div class="row">
+  <div class="col-sm-2 mgs-mainblk-txt">
+  </div>
+  <div class="col-sm-8 mgs-mainblk-txt">
+      <img src="{{ asset('build/img/help/banner_calendar.png') }}"
+                    title="BannerPay" alt="Banner Calendrier Image" class="full-banner-img">
+      <div class="mgs-ace-note">
+          La direction se réserve le droit de modification, ce calendrier est partagé à titre indicatif.
+      </div>
+      <div class="mgs-ace-note">
+          <br><br>Dernière mise à jour : <i id="last-upd-cal">xxx</i>
+      </div>
+
+      <div id="disp-cal">
+
+      </div>
+
+
+  </div>
+  <div class="col-sm-2 mgs-mainblk-txt">
+  </div>
+</div>
+
+{% include 'RawTemplate/_footer.html.twig' %}

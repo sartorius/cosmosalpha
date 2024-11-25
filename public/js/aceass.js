@@ -2139,7 +2139,7 @@ function goToPublishAllS1(){
 
 /***********************************************************************************************************/
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
   console.log('We are in ACE-ASS');
 
   if($('#mg-graph-identifier').text() == 'ua-cartz'){
@@ -2382,7 +2382,7 @@ $(document).ready(function() {
   else if($('#mg-graph-identifier').text() == 'stt-men'){
     // Do nothing
 
-    $(".men-up").click(function() {
+    $(".men-up").on('click', () => {
       document.getElementById('anchor-menup').scrollIntoView({
         behavior: 'smooth'
       });

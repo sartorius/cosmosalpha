@@ -421,11 +421,11 @@ function closeAlertMsg() {
 }
 
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
     console.log('We are in minimum necessary');
 
-    $( ".ace-nav-adj" ).click(function() {
-        $('#loading').show(50);
+    $(".ace-nav-adj").on('click', () => {
+      $('#loading').show(50);
     });
 
     if($('#mg-graph-identifier').text() == 'xxx'){
