@@ -1,0 +1,99 @@
+{% include 'RawTemplate/_header.html.twig' %}
+<div id="mg-graph-identifier"></div>
+
+<div class="row">
+  <div class="col-lg-3 mgs-mainblk-txt">
+  </div>
+  <div class="col-lg-6 mgs-mainblk-txt">
+    <h1>Université</h1>
+    <br><br>
+    <p>
+    <i class="lit-txt">À</i> l'origine, nous avions l'École Supérieure de Maintenance, de Gestion et de communication (ESMGC) créée en 2008 avec l’autorisation d’ouverture délivrée par le Ministère de l’éducation National par arrêté n°15356-2008/MEN du 21 juillet 2008. Depuis l’année universitaire 2009-2010, l'ESMGC s'est transformée en une université dénommée « Université Aceem » un composant (niveau supérieur) du Groupe éducatif Aceem regroupant trois établissements :<br><br>
+    &nbsp;<span class="icon-caret-right nav-icon-fa-sm nav-text"></span>&nbsp;Faculté de Droit, de Gestion et de Communication<br>
+    &nbsp;<span class="icon-caret-right nav-icon-fa-sm nav-text"></span>&nbsp;École Supérieure d’Informatique et d’Électronique<br>
+    &nbsp;<span class="icon-caret-right nav-icon-fa-sm nav-text"></span>&nbsp;École Supérieure des Sciences de la Santé<br><br>
+    Président Directeur Général du Groupe éducatif ACEEM : M. William RATREMA RAKOTOARINIA<br>
+    Recteur de l’université : Professeur Benjamin RANDRIANOELINA
+    </p>
+    <hr>
+    <br>
+    <h1>Notre équipe dirigeante</h1>
+  </div>
+  <div class="col-lg-3 mgs-mainblk-txt">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-3 mgs-mainblk-txt">
+  </div>
+
+        <div class="col-lg-1 univ-col-1 univ-img">
+          <img   src="{{ path('main') }}img/universite/recteur.jpg" style="width:150px; height:150px; opacity: 1;" title="Recteur" alt="Recteur" class="uac-img-center img-profile gray-img">
+          <div class="ace-sub ace-sub-fmt">
+            Recteur<br>
+          </div>
+          <div class="ace-sub2 ace-sub-fmt2">
+            RANDRIANOELINA Benjamin
+          </div>
+        </div>
+        <div class="col-lg-1 univ-col-1 univ-img">
+          <img   src="{{ path('main') }}img/universite/sg.jpg" style="width:150px; height:150px; opacity: 1;" title="sg" alt="sg" class="uac-img-center img-profile gray-img">
+          <div class="ace-sub ace-sub-fmt">
+            SG<br>
+          </div>
+          <div class="ace-sub2 ace-sub-fmt2">
+            RAKOTOARINIA Harivao
+          </div>
+        </div>
+        <div class="col-lg-1 univ-col-1 univ-img">
+          <img   src="{{ path('main') }}img/universite/daf.jpg" style="width:150px; height:150px; opacity: 1;" title="daf" alt="daf" class="uac-img-center img-profile gray-img">
+          <div class="ace-sub ace-sub-fmt">
+            DAF<br>
+          </div>
+          <div class="ace-sub2 ace-sub-fmt2">
+            RAKOTOARINIA Harilala
+          </div>
+        </div>
+        <div class="col-lg-1 univ-col-1 univ-img">
+          <img   src="{{ path('main') }}img/universite/cge.jpg" style="width:150px; height:150px; opacity: 1;" title="cge" alt="cge" class="uac-img-center img-profile gray-img">
+          <div class="ace-sub ace-sub-fmt">
+            Directeur d'études<br>
+          </div>
+          <div class="ace-sub2 ace-sub-fmt2">
+            RAKOTONIAINA Ionintsoa
+          </div>
+        </div>
+  <div class="col-lg-3 mgs-mainblk-txt">
+  </div>
+</div>
+
+<div class="row">
+  <div id="spc-blk"  class="col-lg-12">
+  </div>
+</div>
+
+<div id="home-ban" class="row">
+  {% set home_i = random(['1', '2', '3', '4', '5', '6', '7']) %}
+  <div id="univ-entry"  class="img-home{{ home_i }} col-lg-12">
+  </div>
+  <div id="home-greet" class="col-lg-6">
+    Dignité, créativité, qualité
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-3 mgs-mainblk-txt">
+  </div>
+  <div class="col-lg-6 mgs-mainblk-txt">
+    <br>
+    <h1>Nos chefs de mentions</h1>
+    <br>
+  </div>
+  <div class="col-lg-3 mgs-mainblk-txt">
+  </div>
+</div>
+
+{% include 'Static/_universitelg.html.twig' %}
+
+{% include 'RawTemplate/_footer.html.twig' %}

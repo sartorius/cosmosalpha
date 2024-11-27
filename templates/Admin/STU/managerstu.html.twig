@@ -1,0 +1,101 @@
+{% include 'RawTemplate/_header.w.jsgrid.html.twig' %}
+{# THIS IS NECESSARY FOR PRINT OF STUDENT CARD !!! #}
+{% include 'Dirty/dirtyjsbarcode.html.twig' %}
+{% include 'Dirty/dirtyjspdf.html.twig' %}
+
+
+{% if result_all_stu is defined and result_all_stu is not null %}
+  <script>
+    //let dataTagToJson = '<%= @resultSet.map{|o| Hash[o.each_pair.to_a] }.to_json %>';
+
+    let dataAllSTUToJsonArray =JSON.parse('{{ result_all_stu | json_encode | raw }}');
+    // We init here the filter value
+		var filteredDataAllSTUToJsonArray = Array.from(dataAllSTUToJsonArray);
+    // dataTagToJson = dataTagToJson.replace(/&quot;/g,"\"");
+    // let dataTagToJsonArray = JSON.parse(dataTagToJson);
+  </script>
+{% else %}
+    // Error
+    <script>
+      let dataAllSTUToJsonArray = "";
+    </script>
+{% endif %}
+
+
+<div id="mg-graph-identifier">das-stu</div>
+
+
+
+
+<div class="row">
+  <div class="col-1">
+  </div>
+  <div class="col-10">
+    <h1>Manager étudiant</h1>
+
+    <hr>
+    <div class="mgs-note-banner">Nombre d'étudiants : <i id='mst-filcnt'>{{ result_all_stu|length }}</i> sur {{ result_all_stu|length }}</div>
+  </div>
+  <div class="col-1">
+  </div>
+</div>
+<div class="row dash-bar" id="grid-crit-blc">
+  <div class="col-1">
+  </div>
+
+  <div class="col-2 fil-el">
+    <textarea class="form-control" rows="1" id="filter-all-stu" placeholder="Filtrez min. 2 caractères" style="resize: none;"></textarea>
+  </div>
+  <div class="col-1 fil-el">
+    <button id="re-init-dash-stu" type="button" class="btn btn-md btn-block btn-default">
+      <i class="icon-refresh"></i>
+    </button>
+  </div>
+  <div class="col-1 fil-el">
+      {# To be removed for UACEEM 2 #}
+      <button type="button" id="uac-mst-all-csv" class="btn btn-dark"><i class="icon-file-text-o"></i>&nbsp;Rapport</button>
+    
+  </div>
+
+  <div class="col-5">
+  </div>
+
+  <div class="col-1 fil-el">
+    <button type="button" id="uac-mst-print" class="btn btn-dark"><i class="icon-print"></i>&nbsp;Cartes</button>
+  </div>
+
+
+
+
+  <div class="col-1">
+  </div>
+</div>
+
+
+<div class="row" id="grid-all-blc">
+  <div class="col-1">
+  </div>
+  <div class="col-10">
+    <div id="jsGridAllSTU">
+    </div>
+  </div>
+  <div class="col-1">
+  </div>
+</div>
+
+{# waiting Block #}
+{% include 'RawTemplate/_waitinggif.html.twig' %}
+
+
+
+{# Display here the hidden block of print #}
+{% include 'Admin/STU/_printmax.html.twig' %}
+
+{# Necessary go to #}
+{% include 'Admin/STU/_gotostudentprofile.html.twig' %}
+
+
+
+
+
+{% include 'RawTemplate/_footer.w.jsgrid.mgchart.html.twig' %}

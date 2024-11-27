@@ -1,5 +1,6 @@
 function initGraShortCut(){
-    $("#scmenu-gra").click(function() {
+    
+    $("#scmenu-gra").on('click', () => {
       document.getElementById('anchor-gra').scrollIntoView({
         behavior: 'smooth'
       });
@@ -1197,11 +1198,11 @@ function initWarningEDT(){
       }
     }
   }
-  // We add the hearder only if we have data
+  // We add the header only if we have data
   if(textWarningS0.length  > 0){
     textWarningS0 = headerS0 + textWarningS0;
   }
-  // We add the hearder only if we have data
+  // We add the header only if we have data
   if(textWarningS1.length  > 0){
     textWarningS1 = headerS1 + textWarningS1;
   }
@@ -1662,7 +1663,8 @@ function runStat(){
 // goToSTUFromDashAssiduite(args.item.PAGE);
 function goToSTUFromDashAssiduite(page){
   $("#read-stu-page").val(page);
-  $("#mg-stu-page-form").submit();
+  // $("#mg-stu-page-form").submit();
+  $("#mg-stu-page-form").trigger("submit")
 }
 
 function generateGlobalAssCSV(){
@@ -2187,11 +2189,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Do nothing
-    $( "#scan-ace" ).keyup(function() {
+    //$( "#scan-ace" ).keyup(function() {
+    $("#scan-ace").on('keyup', () => {
       verityContentScan();
     });
 
-    $("#btn-load-bc").click(function() {
+    //$("#btn-load-bc").click(function() {
+    $("#btn-load-bc").on('click', () => {
         loadScan();
     });
 
@@ -2225,7 +2229,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    $("#scmenu-edt").click(function() {
+    //$("#scmenu-edt").click(function() {
+    $("#scmenu-edt").on('click', () => {
       //console.log('You click on scmenu-edt');
 
       document.getElementById('anchor-edt').scrollIntoView({
@@ -2240,7 +2245,8 @@ document.addEventListener('DOMContentLoaded', function() {
     /****************************************************/
     //fillCartoucheMentionProfile();
     // Refresh status
-    $( ".stt-group" ).click(function() {
+    //$( ".stt-group" ).click(function() {
+    $(".stt-group").on('click', () => {
       updateProfStatus(this.id);
     });
 
@@ -2273,7 +2279,8 @@ document.addEventListener('DOMContentLoaded', function() {
         loadSumUpGrid();
         loadHistoPayGrid();
   
-        $(".go-to-top").click(function() {
+        //$(".go-to-top").click(function() {
+        $(".go-to-top").on('click', () => {
           document.getElementById('anchor-top').scrollIntoView({
             behavior: 'smooth'
           });
@@ -2320,10 +2327,12 @@ document.addEventListener('DOMContentLoaded', function() {
   else if($('#mg-graph-identifier').text() == 'dash-ass'){
     // Do nothing dash-ass
     runStat();
-    $( "#uac-ass-glb-csv" ).click(function() {
+    //$( "#uac-ass-glb-csv" ).click(function() {
+    $("#uac-ass-glb-csv").on('click', () => {
       generateGlobalAssCSV();
     });
-    $( "#uac-abs-pdt-xls" ).click(function() {
+    //$( "#uac-abs-pdt-xls" ).click(function() {
+    $("#uac-abs-pdt-xls").on('click', () => {
       generateGlobalPsdXLS();
     });
 
@@ -2352,12 +2361,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   else if($('#mg-graph-identifier').text() == 'aft-loa'){
     // Do nothing
-    $(".after-load-edt-trace").click(function() {
+    //$(".after-load-edt-trace").click(function() {
+    $(".after-load-edt-trace").on('click', () => {
         $(".report-dis").show();
         $(".after-load-edt-trace").hide();
     });
 
-    $("#aftload-edt-nav-up").click(function() {
+    //$("#aftload-edt-nav-up").click(function() {
+    $("#aftload-edt-nav-up").on('click', () => {
       console.log('You click on aftload-edt-nav-up');
 
       document.getElementById('anchor-up-edt').scrollIntoView({
@@ -2372,7 +2383,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   else if($('#mg-graph-identifier').text() == 'loader-edt'){
     // Do nothing
-    $("#file-upl-loader-sub").click(function() {
+    //$("#file-upl-loader-sub").click(function() {
+    $("#file-upl-loader-sub").on('click', () => {
         console.log('You clicked on #file-upl-loader-sub');
         $("#loader-block").hide();
         $("#loader-img").hide();
@@ -2390,7 +2402,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     console.log('You are in stt-men');
-    $("#men-drt").click(function() {
+    //$("#men-drt").click(function() {
+    $("#men-drt").on('click', () => {
       console.log('You click on scmenu-edt');
 
       document.getElementById('anchor-drt').scrollIntoView({
@@ -2398,37 +2411,43 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    $("#men-ges").click(function() {
+    //$("#men-ges").click(function() {
+    $("#men-ges").on('click', () => {
       document.getElementById('anchor-ges').scrollIntoView({
         behavior: 'smooth'
       });
     });
 
-    $("#men-eco").click(function() {
+    //$("#men-eco").click(function() {
+    $("#men-eco").on('click', () => {
       document.getElementById('anchor-eco').scrollIntoView({
         behavior: 'smooth'
       });
     });
 
-    $("#men-inf").click(function() {
+    //$("#men-inf").click(function() {
+    $("#men-inf").on('click', () => {
       document.getElementById('anchor-inf').scrollIntoView({
         behavior: 'smooth'
       });
     });
 
-    $("#men-com").click(function() {
+    //$("#men-com").click(function() {
+    $("#men-com").on('click', () => {
       document.getElementById('anchor-com').scrollIntoView({
         behavior: 'smooth'
       });
     });
 
-    $("#men-ssa").click(function() {
+    //$("#men-ssa").click(function() {
+    $("#men-ssa").on('click', () => {
       document.getElementById('anchor-ssa').scrollIntoView({
         behavior: 'smooth'
       });
     });
 
-    $("#men-rid").click(function() {
+    //$("#men-rid").click(function() {
+    $("#men-rid").on('click', () => {
       document.getElementById('anchor-rid').scrollIntoView({
         behavior: 'smooth'
       });

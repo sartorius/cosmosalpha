@@ -26,7 +26,7 @@ class SecurityController extends AbstractController
 
         $this->logger->debug('*** *** *** *** *** *** *** *** *** Show me $lastUsername: ' . $lastUsername);
 
-        return $this->render('ADM/Security/login.html.twig', [
+        return $this->render('Admin/Security/login.html.twig', [
             'last_username' => $lastUsername,
             'error' => $error,
             ]
@@ -65,7 +65,7 @@ class SecurityController extends AbstractController
             return $this->redirectToRoute('main');
         }
 
-        return $this->render('ADM/Security/register.html.twig', [
+        return $this->render('Admin/Security/register.html.twig', [
             'registrationForm' => $form,
         ]);
     }

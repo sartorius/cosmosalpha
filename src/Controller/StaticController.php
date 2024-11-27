@@ -100,6 +100,26 @@ class StaticController extends AbstractController
         return new Response($content);
     }
 
+    public function contact(Environment $twig, LoggerInterface $logger)
+    {
+        /**
+         * @var User
+         */
+        $user = $this->getUser();
+        if ($user) { 
+            // L'utilisateur est connecté
+            $this->logger->debug('>>> >>> >>> *** *** *** *** *** *** partner getUsername: ' . $user->getUsername());
+        }
+        $debug_session = "Pass variable to check";
+        
+
+        $content = $twig->render('Static/mockup.html.twig', ['debug' => $debug_session,
+                                                                'amiconnected' => ConnectionManager::amIConnectedOrNot(),
+                                                                'scale_right' => ConnectionManager::whatScaleRight()]);
+
+        return new Response($content);
+    }
+
     public function startover(Environment $twig, LoggerInterface $logger)
     {
         /**

@@ -315,6 +315,23 @@ CREATE TABLE IF NOT EXISTS uac_calendar (
 
 
 
+
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (1,'2024-25','2 Septembre 2024','Rentrée des enseignants','','N','2024-09-02','2024-09-03');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (2,'2024-25','3 Septembre 2024','Rentrée des élèves','','N','2024-09-03','2024-09-04');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (3,'2024-25','18 Octobre au 4 Novembre 2024','Vacances de la Toussaint','','H','2024-10-21','2024-11-01');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (4,'2024-25','20 Décembre 2024 au 3 Janvier 2024','Vacances de Noël','','H','2024-12-23','2025-01-03');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (5,'2024-25','8 Mars 2025','Journée Internationale de la Femme','','N','2025-03-08','2025-03-08');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (6,'2024-25','21 Février 2025 au 10 Mars 2025','Vacances été Austral','','H','2025-02-24','2025-03-07');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (7,'2024-25','29 Mars 2025','Martyrs 1947','','H','2025-03-29','2025-03-29');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (8,'2024-25','20 Avril 2025','Dimanche de Résurrection','','N','2025-04-20','2025-04-20');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (9,'2024-25','21 Avril 2025','Lundi de Pâques','','H','2025-04-21','2025-04-21');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (10,'2024-25','25 Avril au 12 Mai 2025','Fête du Travail','','H','2025-04-28','2025-05-09');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (11,'2024-25','29 Mai 2025','Ascension','','H','2025-05-29','2025-05-29');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (12,'2024-25','8 Juin 2025','Dimanche de Pentecôte','','H','2025-06-08','2025-06-08');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (13,'2024-25','9 Juin 2025','Lundi de Pentecôte','','H','2025-06-09','2025-06-09');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (14,'2024-25','26 Juin 2025','Fête nationale','','H','2025-06-28','2025-06-28');
+  INSERT INTO uac_calendar (id, calendar, display_date, display_info, observation, type_of_day, tech_start_date, tech_end_date) VALUES (15,'2024-25','15 Aout 2025','Assomption ','','H','2025-08-25','2025-08-25');
+
 /*************
 SELECTION COHORT !
 

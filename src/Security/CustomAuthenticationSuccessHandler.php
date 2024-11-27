@@ -54,7 +54,10 @@ class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler
 
         
         $_SESSION["username"] = $user->getUsername();
-        $_SESSION["scale_right"] = 0;
+        $_SESSION["firstname"] = 'Test';
+        $_SESSION["lastname"] = 'Test';
+        $_SESSION["id"] = 7;
+        $_SESSION["scale_right"] = 100;
 
         /*
         $_SESSION["id"] = $result[0]['ID'];

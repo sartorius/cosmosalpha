@@ -28,6 +28,12 @@ secondaire:
 superieur:
     path:       /superieur
     controller: App\Controller\StaticController::superieur
+contact:
+    path:       /contact
+    controller: App\Controller\StaticController::contact
 calendar:
     path:       /calendar
     controller: App\Controller\StaticController::calendar
+managerstu:
+    path:       /managerstu
+    controller: App\Controller\AdminSTUController::managerstu

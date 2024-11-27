@@ -324,9 +324,9 @@ function loadAllSTUGrid(){
         },
         //Default width is auto
         { name: "CLASS_MENTION",
-          title: "Mention",
+          title: "Classe",
           type: "text",
-          width: 60,
+          width: 40,
           headercss: "cell-recap-hd",
           css: "cell-recap-l"
         },
@@ -334,7 +334,7 @@ function loadAllSTUGrid(){
         { name: "CLASS_NIVEAU",
           title: 'Niveau',
           type: "text",
-          width: 15,
+          width: 20,
           headercss: "cell-recap-hd",
           css: "cell-recap-l"
         },
